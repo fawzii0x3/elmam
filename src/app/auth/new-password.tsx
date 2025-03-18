@@ -76,7 +76,12 @@ export default function Page() {
                     </View>
                 </View>
                 <Link href={'/protected'} asChild>
-                    <Button mode="contained" style={{paddingVertical: 8, marginTop: 40, borderRadius: 50}}>
+                    <Button mode="contained"
+                            style={{
+                                marginTop: 40, borderRadius: 50
+                            }}
+                            labelStyle={{paddingVertical: 8}}
+                    >
                         تاكيد
                     </Button>
                 </Link>

@@ -17,7 +17,7 @@ export default function RootLayout() {
     });
     const [hide, setHide] = useState(true)
     useEffect(() => {
-        const sub = setTimeout(() => setHide(false), 6000);
+        const sub = setTimeout(() => setHide(false), 5000);
         return () => clearTimeout(sub);
     }, []);
     if (hide || !loaded) {

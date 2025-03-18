@@ -1,13 +1,17 @@
 import {Tabs} from "expo-router";
 import {useTheme} from "react-native-paper";
 import {AntDesign, Entypo, Feather, Octicons} from "@expo/vector-icons";
+import {LinearBackground} from "@/components";
 
 export default function TabsLayout() {
     const {colors} = useTheme()
-    return <Tabs screenOptions={{
-        headerShown: false,
-        tabBarActiveTintColor: colors.primary,
-    }}>
+    return <Tabs
+        screenOptions={{
+            headerShown: false,
+            tabBarActiveTintColor: colors.primary,
+        }}
+        screenLayout={LinearBackground}
+    >
         <Tabs.Screen
             name={'profile'} options={{
             title: 'الملف الشخصي',

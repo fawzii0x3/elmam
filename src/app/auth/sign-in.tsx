@@ -92,7 +92,8 @@ export default function Page() {
                     </Link>
                 </View>
                 <Link href={'/auth/forget-password'} asChild>
-                    <Button mode="contained" style={{paddingVertical: 8, marginTop: 40, borderRadius: 50}}>
+                    <Button mode="contained" style={{marginTop: 40,}}
+                            labelStyle={{paddingVertical: 8, borderRadius: 50}}>
                         تسجيل دخول
                     </Button>
                 </Link>
