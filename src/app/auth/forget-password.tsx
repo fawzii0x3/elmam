@@ -1,6 +1,6 @@
 import {BottomSheetTextInput as TextInput, BottomSheetView} from "@gorhom/bottom-sheet";
 import {View} from "react-native";
-import {Text, Button,  useTheme} from "react-native-paper";
+import {Text, Button, useTheme} from "react-native-paper";
 import {Link} from "expo-router";
 import BottomSheet from '@gorhom/bottom-sheet';
 import {SafeAreaView} from "react-native-safe-area-context";
@@ -19,15 +19,15 @@ export default function Page() {
                     lineHeight: 30,
                     textAlign: 'center'
                 }}
-            >انشاء كلمة مرور جديدة</Text>
+            >اعادة تعيين كلمة مرور</Text>
             <Text style={{
                 color: '#fff',
                 fontWeight: '400',
                 fontSize: 14,
                 lineHeight: 20,
-            }}>قم بانشاء كلمة مرور جديدة</Text>
+            }}>قم بادخال البريد الالكتروني المرتبط بيه حسابك</Text>
         </View>
-        <BottomSheet handleIndicatorStyle={{backgroundColor: 'transparent'}}>
+        <BottomSheet handleIndicatorStyle={{backgroundColor: 'transparent'}} keyboardBlurBehavior={'restore'}>
             <BottomSheetView style={{gap: 40, paddingHorizontal: 24, paddingBottom: 40}}>
                 <View style={{gap: 4}}>
                     <Text style={{textAlign: 'right', paddingHorizontal: 16}}>البريد الكتروني</Text>
@@ -54,7 +54,9 @@ export default function Page() {
                     </View>
                 </View>
                 <Link href={'/auth/verification-code'} asChild>
-                    <Button mode="contained" style={{paddingVertical: 8, marginTop: 40, borderRadius: 50}} icon={'arrow-left-thin'}>
+                    <Button mode="contained" style={{marginTop: 40, borderRadius: 50}}
+                            labelStyle={{paddingVertical: 8}}
+                            icon={'arrow-left-thin'}>
                         التالي
                     </Button>
                 </Link>

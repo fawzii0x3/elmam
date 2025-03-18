@@ -9,14 +9,14 @@ export function LinearBackground({children}: PropsWithChildren) {
         start={{x: 1, y: 0}}
         end={{x: 0, y: 0}}
     >
-        <BackgroundArrows
-            style={{
-                position: 'absolute',
-                left: '50%',
-                top: 20,
-                transform: [{translateX: "-50%"}],
-            }}
-        />
+        {/*<BackgroundArrows*/}
+        {/*    style={{*/}
+        {/*        position: 'absolute',*/}
+        {/*        left: '50%',*/}
+        {/*        top: 20,*/}
+        {/*        transform: [{translateX: "-50%"}],*/}
+        {/*    }}*/}
+        {/*/>*/}
         {children}
     </LinearGradient>
 }

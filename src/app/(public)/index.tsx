@@ -58,7 +58,7 @@ export default function Page() {
                 <View style={{alignItems: 'center', paddingTop: 24}}>
                     <Logo/>
                 </View>
-                <PagerView style={styles.container} initialPage={0} layoutDirection={'rtl'} ref={pagerRef}
+                <PagerView style={styles.container} initialPage={0} layoutDirection={'ltr'} ref={pagerRef}
                            onPageScroll={onPageScroll}
                 >
                     {Map.map((item, index) => (

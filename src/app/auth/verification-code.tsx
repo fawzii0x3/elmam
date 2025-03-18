@@ -54,7 +54,8 @@ function Content() {
             <OtpInput onFocus={handleOnFocus} onBlur={handleOnBlur} autoFocus={false} numberOfDigits={4}/>
         </View>
         <Link href={'/auth/new-password'} asChild>
-            <Button mode="contained" style={{paddingVertical: 8, borderRadius: 50}} icon={'arrow-left-thin'}>
+            <Button mode="contained" labelStyle={{paddingVertical: 8,}} style={{borderRadius: 50}}
+                    icon={'arrow-left-thin'}>
                 التالي
             </Button>
         </Link>
