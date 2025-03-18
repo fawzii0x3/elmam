@@ -173,7 +173,6 @@ export default function Page() {
           <View
             style={{
               backgroundColor: "#F7f7f8",
-              marginTop: 32,
               paddingVertical: 16,
               borderRadius: 16,
               width: "90%",
