@@ -6,5 +6,6 @@ export default function Layout() {
         <Stack.Screen name="opportunities"/>
         <Stack.Screen name="notification"/>
         <Stack.Screen name="settings"/>
+        <Stack.Screen name="channel"/>
     </Stack>
 }

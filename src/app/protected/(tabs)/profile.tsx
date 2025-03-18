@@ -5,6 +5,7 @@ import {faker, fakerAR} from "@faker-js/faker";
 import {Entypo, FontAwesome, SimpleLineIcons} from "@expo/vector-icons";
 import {Link, LinkProps} from "expo-router";
 import React, {ReactElement} from "react";
+import {PressableLine} from "@/components";
 
 export default function Page() {
     return <SafeAreaView style={{flex: 1}} edges={['top']}>
@@ -57,7 +58,7 @@ export default function Page() {
             />
             <PressableLine
                 text="تسجيل الخروج"
-                Icon={<FontAwesome name="sign-out" size={24} color="red"  style={{transform: [{rotateY: '180deg'}]}}/>}
+                Icon={<FontAwesome name="sign-out" size={24} color="red" style={{transform: [{rotateY: '180deg'}]}}/>}
                 href="/"
                 textColor={'red'}
             />
@@ -65,39 +66,3 @@ export default function Page() {
     </SafeAreaView>
 }
 
-interface PressableLineProps extends LinkProps {
-    text: string
-    Icon: ReactElement
-    textColor?: string
-}
-
-function PressableLine({text, Icon, textColor = '#3F3F50', ...props}: PressableLineProps) {
-    return <Link {...props} asChild>
-        <TouchableOpacity
-            style={{flexDirection: 'row-reverse', justifyContent: 'space-between', alignItems: 'center'}}>
-            <View style={{flexDirection: 'row', alignItems: 'center', gap: 16}}>
-                <Text
-                    style={{
-                        fontWeight: '500',
-                        fontSize: 16,
-                        color: textColor
-                    }}
-                >{text}</Text>
-                <View style={{
-                    backgroundColor: '#fff',
-                    width: 24 * 2,
-                    height: 24 * 2,
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    borderRadius: "50%",
-                    borderColor: '#EBEBEF',
-                    borderWidth: 1
-                }}>
-                    {Icon}
-                </View>
-            </View>
-            <Entypo name="chevron-thin-left" size={24} color="#6C8799"/>
-        </TouchableOpacity>
-    </Link>
-
-}

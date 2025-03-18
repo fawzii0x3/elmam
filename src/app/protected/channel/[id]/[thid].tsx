@@ -49,7 +49,7 @@ export default function Page() {
                 }))}
                 renderItem={({item}) => {
                     return (
-                        <Link href={`/protected/channel/${item.id}`} asChild>
+                        <Link href={'/protected/settings'} asChild>
                             <TouchableOpacity
                                 style={{
                                     flexDirection: 'row-reverse',
@@ -71,7 +71,7 @@ export default function Page() {
                                 <View style={{alignItems: 'center'}}>
                                     {item.messageCount ? <Text style={{
                                         color: '#A9A9BC',
-                                        fontSize: 10
+                                        fontSize:10
                                     }}>اليوم</Text> : null}
                                     <Text
                                         style={{
